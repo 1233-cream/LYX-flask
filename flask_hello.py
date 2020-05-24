@@ -1,9 +1,12 @@
 from flask import Flask, render_template
+from flask import request
+from flask import redirect
+from flask import jsonify
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/index/list',methods=['Get'])
 def index():
 
     url_str = 'www.baidu.com'
@@ -21,4 +24,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',p)
